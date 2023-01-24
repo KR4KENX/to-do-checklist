@@ -32,3 +32,11 @@ footer{
     border-top: 5px solid #251607;
     font-family: 'Rubik', sans-serif;
 }
+footer input[type="text"]{
+    width: 30%;
+    height: 25px;
+    padding-left: 30px;
+    background-image: url('check-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}

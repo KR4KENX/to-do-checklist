@@ -13,6 +13,8 @@ function createTask(){
     let newTask = document.getElementById("newTask");
     let main = document.getElementsByTagName("main")[0];
 
+    if(!newTask.value) return;
+
     let newTaskEl = document.createElement("div");
 
     newTaskEl.className = "task";
