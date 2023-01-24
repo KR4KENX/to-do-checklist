@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Solitreo&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>This week, my To-Do</header>
+    <main>
+        <div class="task">
+            <input type="checkbox" name="isDone" id="isDone">
+            <p>Clean house</p>
+        </div>
+        <div class="task">
+            <input type="checkbox" name="isDone" id="isDone">
+            <p>Order new trousers</p>
+        </div>
+        <div class="task">
+            <input type="checkbox" name="isDone" id="isDone">
+            <p>Develop new website</p>
+        </div>
+    </main>
+    <footer>
+        <label for="">Add new task</label>
+        <input type="text" name="newTask" id="newTask">
+        <input type="button" value="Add" onclick="createTask()">
+    </footer>
+</body>
+</html>
