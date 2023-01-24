@@ -1,18 +1,14 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #e0be00;
+    background-color: #ffd900;
     font-family: 'Solitreo', cursive;
 }
 header{
-    width: 100%;
     font-size: 3em;
-    padding: .3em;
+    padding: .4em;
     border-bottom: 5px solid #251607;
     font-family: 'Rubik', sans-serif;
-}
-p{
-    margin: 0;
 }
 .task{
     font-size: 2em;
@@ -26,7 +22,7 @@ p{
     top: 40%;
 }
 .task p{
-    margin-left: 1em;
+    margin: 0 0 0 1em;
 }
 footer{
     bottom: 0;
