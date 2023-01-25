@@ -2,24 +2,34 @@ window.onload = () => {
     addListenerOnTasks();
 }
 function addListenerOnTasks(){
-    document.querySelectorAll(".task > input").forEach((element) => {
-        element.addEventListener("change",()=>{
-            element.parentElement.remove();
+    document.querySelectorAll(".task > textarea").forEach((element) => {
+        element.addEventListener("keydown",(key)=>{
+            if(key.key === "Enter"){
+                createTask(element);
+            }
         })
     });
+
+    document.querySelectorAll(".task > input[type='checkbox']").forEach((element) => {
+        element.checked = true;
+        element.addEventListener("change",() =>{
+                if(element.parentNode.querySelector("textarea") && !element.parentNode.querySelector("textarea").value) return;
+                element.parentElement.remove();          
+        })
+    })
 }
 
-function createTask(){
-    let newTask = document.getElementById("newTask");
-    let main = document.getElementsByTagName("main")[0];
+function createTask(nodeElement){
+    let newParagpEl = document.createElement("p");
+    let taskClone = nodeElement.parentNode.cloneNode(true);
+    taskClone.querySelector("textarea").value = "";
 
-    if(!newTask.value) return;
+    newParagpEl.innerText = nodeElement.value;
+    nodeElement.parentNode.appendChild(newParagpEl);
 
-    let newTaskEl = document.createElement("div");
+    document.querySelector("main").appendChild(taskClone);
 
-    newTaskEl.className = "task";
-    newTaskEl.innerHTML = `<input type='checkbox' name='isDone' id='isDone'> <p>${newTask.value}</p>`
-    
-    main.appendChild(newTaskEl);
+    nodeElement.parentNode.removeChild(nodeElement);
+
     addListenerOnTasks();
 }

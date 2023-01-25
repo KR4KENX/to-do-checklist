@@ -12,17 +12,33 @@ header{
 }
 .task{
     font-size: 2em;
-    padding: .4em 0 0 .3em;
+    padding-left: .5em;
     border-bottom: 3px solid #251607;
     position: relative;
 }
-.task input{
+.task input[type="checkbox"]{
     transform: scale(2);
     position: absolute;
     top: 40%;
 }
+.task textarea{
+    font-family: 'Solitreo', cursive;
+    font-size: .65em;
+    margin: 0 0 0 2em;
+    width: 80%;
+    height: 3em;
+    background-color: #ffd900;
+    border: 0;
+    resize: none;
+}
+.task textarea:active, .task textarea:focus{
+    outline: none;
+}
 .task p{
-    margin: 0 0 0 1em;
+    margin: 0;
+    padding: 1em 1em;
+    width: 80%;
+    word-break: break-all;
 }
 footer{
     bottom: 0;
